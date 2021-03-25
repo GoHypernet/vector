@@ -1138,8 +1138,9 @@ server.post<{ Params: { chainId: string }; Body: JsonRpcRequest }>(
     }
   },
 );
-
-server.listen(8000, "0.0.0.0", (err, address) => {
+const PORT = process.env.PORT || 8000;
+console.log("Found port ", PORT)
+server.listen(PORT, "0.0.0.0", (err, address) => {
   if (err) {
     logger.error(err);
     process.exit(1);

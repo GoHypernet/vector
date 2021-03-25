@@ -33,7 +33,7 @@ import { autoRebalanceTask, startAutoRebalanceTask } from "./autoRebalance";
 import { wallet } from "./metrics";
 import { ServerError } from "./errors";
 
-const routerPort = 8000;
+const routerPort = process.env.PORT || 8000;
 const routerBase = `http://router:${routerPort}`;
 const isAlivePath = "/is-alive";
 const setupPath = "/setup";

@@ -69,6 +69,8 @@ if [[ "$VECTOR_PROD" == "true" ]]
 then
   echo "Starting node in prod-mode"
   export NODE_ENV=production
+  echo "Using port $PORT"
+  export PORT=$PORT
   node --no-deprecation dist/bundle.js &
 
 else
